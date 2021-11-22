@@ -1,0 +1,17 @@
+<div class="menu-sidebar-content d-flex flex-column-reverse flex-md-row">
+  <nav class="navbar-sidebar">
+    <div *ngIf="Listcities.length">
+      <ul class="list-unstyled navbar-list" style="cursor: pointer">
+
+          <li *ngFor="let citie of Listcities">
+
+            <app-weatherItem
+            [citie]="citie"
+            (CitieClicked)="displaythisCity($event)"
+            ></app-weatherItem>
+
+          </li>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,13 @@
+
+.input[type=text]{
+  width: 100%;
+  padding:  10px;
+  margin:10px 0;
+  display: inline-block;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+

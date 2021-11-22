@@ -1,0 +1,33 @@
+
+<div class="d-flex justify-content-center" style="margin-bottom: 75px;margin-top: 100px;">
+  <section class="weather-search">
+  <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+    <button name="button_search" type="submit" class="btn-success" style="margin-right: 20px;">Find City</button>
+    <input type="text" ngModel name="city" class="text-input" placeholder="Name of a City">
+  </form>
+</section>
+</div>
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8" style="margin-top: 100px;box-sizing: border-box; border-radius: 6px;" >
+        <app-WeatherDetails
+        ></app-WeatherDetails>
+    </div>
+    <div class="col-md-4 col-md-offset-2" style="    margin-top: -42px;">
+      <section class="weather-list  margin-top: 100px;" >
+        <div *ngIf="Listcities.length>0">
+          <app-weatherList
+          [Listcities]="Listcities"
+          (CitieClickedtoDashboard)="Emit_City_ID($event)"
+          ></app-weatherList>
+        </div>
+      </section>
+
+    </div>
+
+
+  </div>
+</div>
